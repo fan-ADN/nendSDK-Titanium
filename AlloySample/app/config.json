@@ -1,0 +1,23 @@
+{
+	"global": {
+
+	}, 
+	"env:development": {}, 
+	"env:test": {}, 
+	"env:production": {}, 
+	"os:android": {
+		"apiKey": "c5cb8bc474345961c6e7a9778c947957ed8e1e4f",
+		"spotId" : "3174",
+		"iconApiKey": "0c734134519f25412ae9a9bff94783b81048ffbe",
+		"iconSpotId": "101282"
+		},
+	"os:blackberry": {},
+	"os:ios": {
+		"apiKey": "a6eca9dd074372c898dd1df549301f277c53f2b9",
+		"spotId" : "3172",
+		"iconApiKey": "2349edefe7c2742dfb9f434de23bc3c7ca55ad22",
+		"iconSpotId": "101281"
+	},
+	"os:mobileweb": {},
+	"dependencies": {}
+}

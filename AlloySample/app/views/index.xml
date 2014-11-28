@@ -1,0 +1,12 @@
+<Alloy>
+	<Window class="container">
+		<Label id="titlelabel">samples</Label>
+
+		<Label id="nadViewLabel">Banner (ios/android)</Label>
+		<View ns="Alloy.Globals.nendAd" id="nadView"/>
+		
+		<Label id="nadIconsLabel">Icons (ios/android)</Label>
+		<View ns="Alloy.Globals.nendAd" id="nadIcons"/>
+
+	</Window>
+</Alloy>
