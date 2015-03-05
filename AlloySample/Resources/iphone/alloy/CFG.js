@@ -1,0 +1,1 @@
+module.exports={"dependencies":{},"nendSpotId":"3172","nendApiKey":"a6eca9dd074372c898dd1df549301f277c53f2b9","nendIconsSpotId":"101282","nendIconsApiKey":"0c734134519f25412ae9a9bff94783b81048ffbe","nendInterstitialSpotId":"213208","nendInterstitialApiKey":"308c2499c75c4a192f03c02b2fcebd16dcb45cc9"};

@@ -1,53 +1,44 @@
-".container": {
-	backgroundColor:"white"
-}
-
 "Label": {
 	width: Ti.UI.SIZE,
 	height: Ti.UI.SIZE,
 	color: "#000"
 }
 
-"#titlelabel": {
-	top: 22,
-	font: {
-		fontSize: 18
-	}
-}
-
-"#nadViewLabel":{
-	top:52,
+"#label": {
 	font: {
 		fontSize: 12
 	}
 }
+
 "#nadView": {
-	top: 68,
 	width: 320,
-	height: 50,
-	//backgroundColor: "#333"
-	//apiKey:Alloy.Globals.nendAd.APIKEY,
-	//spotId:Alloy.Globals.nendAd.SPOTID
-	apiKey: Alloy.CFG.apiKey,
-	spotId: Alloy.CFG.spotId,
+	height: 75,
+	apiKey: Alloy.CFG.nendApiKey, 
+	spotId: Alloy.CFG.nendSpotId
 }
 
-"#nadIconsLabel": {
-	top:120,
-	font: {
-		fontSize: 12
-	}
-}
-"#nadIcons": {
-	adType: 'icon',
-	top: 136,
-	width: 300,
+"#nadIconsView": {
+	width: 75,
 	height: 75,
-	//backgroundColor: "#CCC",
-	orientation: "horizontal",
-	// textHidden: true,
-	// apiKey:Alloy.Globals.nendAd.ICON_APIKEY,
-	// spotId:Alloy.Globals.nendAd.ICON_SPOTID
-	apiKey: Alloy.CFG.iconApiKey,
-	spotId: Alloy.CFG.iconSpotId,
+	adType:'icon', 
+	orientation:'horizontal',
+	apiKey: Alloy.CFG.nendIconsApiKey, 
+	spotId: Alloy.CFG.nendIconsSpotId
 }
+
+"#tab1": {
+    title:'BannerType'
+ }
+
+"#tab2": {
+    title:'IconType'
+ }
+
+"#tab3": {
+    title:'InterstitialType'
+ }
+
+"#mywin": {
+	backgroundColor:"white"
+}
+

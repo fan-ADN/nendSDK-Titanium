@@ -1,25 +1,17 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
 Titanium.UI.setBackgroundColor('#000');
 
-// create tab group
 var tabGroup = Titanium.UI.createTabGroup();
 
-
-//
-// create base UI tab and root window
-//
+//win1 : banner type
 var win1 = Titanium.UI.createWindow({  
     title:'BannerType',
     backgroundColor:'#fff'
 });
 var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
     title:'BannerType',
     window:win1
 });
 
-
-// bannerAd
 var ad = require('net.nend');
 var adView;
 if (Ti.Platform.osname == 'android') {
@@ -27,38 +19,28 @@ if (Ti.Platform.osname == 'android') {
 	spotId: 3174,
 	apiKey: 'c5cb8bc474345961c6e7a9778c947957ed8e1e4f',
 	width: '320dp',
-	height: '50dp',
-	// top: '100dp'
-	// left: '0dp'
+	height: '50dp'
 	});
 } else {
 	adView = ad.createView({
 	spotId: 3172,
 	apiKey: 'a6eca9dd074372c898dd1df549301f277c53f2b9',
 	width: 320,
-	height: 50,
-	//top: 100,
-	//left: 10,
+	height: 50
 	});	
 }
 win1.add(adView);
 
-
-//
-// create controls tab and root window
-//
+//win2:icon type
 var win2 = Titanium.UI.createWindow({  
     title:'IconType',
     backgroundColor:'#fff'
 });
 var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
     title:'IconType',
     window:win2
 });
 
-
-// iconViews.
 var adIconsView;
 if (Ti.Platform.osname == 'android'){
 	// Android
@@ -67,10 +49,9 @@ if (Ti.Platform.osname == 'android'){
 	spotId: 101282,
 	apiKey: '0c734134519f25412ae9a9bff94783b81048ffbe',
 	orientation:'horizontal',
-	// top: '100dp',
-	// left: '10dp',
 	width: '300dp',
-	height: '75dp'
+	height: '75dp',
+	iconCount: 1
 });
 } else {
 	// iOS
@@ -79,21 +60,82 @@ if (Ti.Platform.osname == 'android'){
 	spotId: 101281,
 	apiKey: '2349edefe7c2742dfb9f434de23bc3c7ca55ad22',
 	orientation:'horizontal',
-	//top: 100,
-	//left: 10,
 	width: 300,
-	height: 75
+	height: 75,
+	iconCount: 1
 	});
 }
-
 win2.add(adIconsView);
 
-//
-//  add tabs
-//
+
+// win3 : interstitial type
+var win3 = Titanium.UI.createWindow({  
+    title:'InterstitialType',
+    backgroundColor:'#fff'
+});
+var tab3 = Titanium.UI.createTab({  
+    title:'InterstitialType',
+    window:win3
+});
+var button = Ti.UI.createButton({
+	title: 'show interstitial',
+	color: 'black',
+	width: 'auto',
+	height: 'auto'
+});
+button.addEventListener('click', function(){
+	ad.showInterstitial();
+});
+win3.add(button);
+
+if (Ti.Platform.osname == 'android'){
+  ad.apiKey='8c278673ac6f676dae60a1f56d16dad122e23516';
+  ad.spotId=213206;
+}else{
+  ad.apiKey='308c2499c75c4a192f03c02b2fcebd16dcb45cc9';
+  ad.spotId=213208;
+}
+ad.createInterstitial();
+
 tabGroup.addTab(tab1);
 tabGroup.addTab(tab2);  
+tabGroup.addTab(tab3);  
 
-
-// open tab group
 tabGroup.open();
+
+//Event Listener
+adView.addEventListener('receive', function(e){
+    Ti.API.info('banner receive');
+});
+
+adView.addEventListener('error', function(e){
+    Ti.API.info('banner error');
+});
+
+adView.addEventListener('click', function(e){
+    Ti.API.info('banner click');
+});
+
+adIconsView.addEventListener('receive', function(e){
+    Ti.API.info('icon receive');
+});
+
+adIconsView.addEventListener('error', function(e){
+    Ti.API.info('icon error');
+});
+
+adIconsView.addEventListener('click', function(e){
+    Ti.API.info('icon click');
+});
+
+ad.addEventListener('interstitialLoadResult', function(e){
+    Ti.API.info('interstitial LoadResult ResultCode = ' + e.resultCode);
+});
+
+ad.addEventListener('interstitialShowResult', function(e){
+    Ti.API.info('interstitial ShowResult ResultCode = ' + e.resultCode);
+});
+
+ad.addEventListener('interstitialClick', function(e){
+    Ti.API.info('interstitial Click ResultCode = ' + e.resultCode);
+});

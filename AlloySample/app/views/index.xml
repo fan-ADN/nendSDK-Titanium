@@ -1,12 +1,19 @@
 <Alloy>
-	<Window class="container">
-		<Label id="titlelabel">samples</Label>
-
-		<Label id="nadViewLabel">Banner (ios/android)</Label>
-		<View ns="Alloy.Globals.nendAd" id="nadView"/>
-		
-		<Label id="nadIconsLabel">Icons (ios/android)</Label>
-		<View ns="Alloy.Globals.nendAd" id="nadIcons"/>
-
-	</Window>
+    <TabGroup>
+    	<Tab id="tab1">
+        	<Window id="mywin">
+        		<View ns="Alloy.Globals.nendAd" id="nadView"/>
+        	</Window>
+    	</Tab>
+    	<Tab id="tab2">
+        	<Window id="mywin">
+	        	<View ns="Alloy.Globals.nendAd" id="nadIconsView"/>
+        	</Window>
+    	</Tab>
+    	<Tab id="tab3">
+			<Window id="mywin">
+				<Label id="label" onClick="doClick">show interstitial</Label>
+        	</Window>
+    	</Tab>
+     </TabGroup>
 </Alloy>
