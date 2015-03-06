@@ -8,6 +8,10 @@ ad.spotId=Alloy.CFG.nendInterstitialSpotId;
 ad.createInterstitial();
 
 
+$.index.addEventListener('android:back', function(e){
+    Ti.API.info('android:back');
+    ad.showFinishInterstitial();
+});
 
 $.nadView.addEventListener('receive', function(e){
     Ti.API.info('banner receive');

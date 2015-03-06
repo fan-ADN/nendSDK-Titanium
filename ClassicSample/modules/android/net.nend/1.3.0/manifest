@@ -15,4 +15,4 @@ name: nend
 moduleid: net.nend
 guid: bb9071eb-065f-49ef-bd55-3c807006c9fe
 platform: android
-minsdk: 3.4.0.GA
+minsdk: 3.5.0.GA

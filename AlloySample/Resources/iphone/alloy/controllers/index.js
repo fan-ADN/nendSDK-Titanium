@@ -99,6 +99,10 @@ function Controller() {
     ad.apiKey = Alloy.CFG.nendInterstitialApiKey;
     ad.spotId = Alloy.CFG.nendInterstitialSpotId;
     ad.createInterstitial();
+    $.index.addEventListener("android:back", function() {
+        Ti.API.info("android:back");
+        ad.showFinishInterstitial();
+    });
     $.nadView.addEventListener("receive", function() {
         Ti.API.info("banner receive");
     });
