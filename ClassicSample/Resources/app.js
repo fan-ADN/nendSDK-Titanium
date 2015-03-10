@@ -85,10 +85,16 @@ var button = Ti.UI.createButton({
 });
 button.addEventListener('click', function(){
 	ad.showInterstitial();
+	// if (Ti.Platform.osname == 'android'){
+		// ad.showInterstitialWithSpotID(213206);
+	// }else{
+		// ad.showInterstitialWithSpotID(213208);
+	// }
 });
 tabGroup.addEventListener('android:back', function(e){
     Ti.API.info('android:back');
     ad.showFinishInterstitial();
+    // ad.showFinishInterstitialWithSpotID(213206);
 });
 win3.add(button);
 

@@ -9,7 +9,7 @@ function __processArg(obj, key) {
 
 function Controller() {
     function doClick() {
-        ad.showInterstitial();
+        ad.showInterstitialWithSpotID(Alloy.CFG.nendInterstitialSpotId);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
@@ -101,7 +101,7 @@ function Controller() {
     ad.createInterstitial();
     $.index.addEventListener("android:back", function() {
         Ti.API.info("android:back");
-        ad.showFinishInterstitial();
+        ad.showFinishInterstitial(Alloy.CFG.nendInterstitialSpotId);
     });
     $.nadView.addEventListener("receive", function() {
         Ti.API.info("banner receive");
