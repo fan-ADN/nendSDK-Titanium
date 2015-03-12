@@ -18,10 +18,13 @@
 }
 
 "#nadIconsView": {
-	width: 75,
+	width: 320,
 	height: 75,
 	adType:'icon', 
 	orientation:'horizontal',
+	// textHidden: true,
+	// iconSpaceEnabled: false,
+	iconCount: 1,
 	apiKey: Alloy.CFG.nendIconsApiKey, 
 	spotId: Alloy.CFG.nendIconsSpotId
 }

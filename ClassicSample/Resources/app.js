@@ -51,6 +51,8 @@ if (Ti.Platform.osname == 'android'){
 	orientation:'horizontal',
 	width: '300dp',
 	height: '75dp',
+	// textHidden: true,
+	// iconSpaceEnabled: false,
 	iconCount: 1
 });
 } else {
@@ -62,6 +64,8 @@ if (Ti.Platform.osname == 'android'){
 	orientation:'horizontal',
 	width: 300,
 	height: 75,
+	// textHidden: true,
+	// iconSpaceEnabled: false,
 	iconCount: 1
 	});
 }
