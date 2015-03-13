@@ -1,4 +1,4 @@
-# nendSDK-iOS Sample Project
+# nendSDK-Titanium Sample Project for Alloy
 
 ![ロゴ](https://github.com/fan-ADN/nendSDK-Android/blob/master/Sample/res/drawable/nend_logo.png)
 
