@@ -6,6 +6,11 @@
 nendSDK Titanium Mobile用モジュールのサンプルプロジェクトです。
 基本的な実装方法と動作確認が行えます。
 
+本サンプルプロジェクトにはnendSDK Titanium Mobile用モジュールは付随しておりません。
+下記リンクよりダウンロードし、サンプルプロジェクトに追加願います。
+
+https://www.nend.net/dl/mediapartner/
+
 ## Requirement
 * Titanium SDK 3.5.0.GA 以上
 

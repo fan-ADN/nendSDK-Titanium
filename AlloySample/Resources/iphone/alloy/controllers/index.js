@@ -9,7 +9,7 @@ function __processArg(obj, key) {
 
 function Controller() {
     function doClick() {
-        ad.showInterstitialWithSpotID(Alloy.CFG.nendInterstitialSpotId);
+        ad.showInterstitial();
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
@@ -51,10 +51,11 @@ function Controller() {
         id: "mywin"
     });
     $.__views.nadIconsView = Alloy.Globals.nendAd.createView({
-        width: 75,
+        width: 320,
         height: 75,
         adType: "icon",
         orientation: "horizontal",
+        iconCount: 1,
         apiKey: Alloy.CFG.nendIconsApiKey,
         spotId: Alloy.CFG.nendIconsSpotId,
         id: "nadIconsView"
@@ -101,7 +102,7 @@ function Controller() {
     ad.createInterstitial();
     $.index.addEventListener("android:back", function() {
         Ti.API.info("android:back");
-        ad.showFinishInterstitial(Alloy.CFG.nendInterstitialSpotId);
+        ad.showFinishInterstitial();
     });
     $.nadView.addEventListener("receive", function() {
         Ti.API.info("banner receive");
