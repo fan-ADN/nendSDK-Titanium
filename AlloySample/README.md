@@ -7,9 +7,8 @@ nendSDK Titanium Mobile用モジュールのサンプルプロジェクトです
 Alloyを使用した基本的な実装方法と動作確認が行えます。
 
 本サンプルプロジェクトにはnendSDK Titanium Mobile用モジュールは含まれておりません。
-下記リンクよりダウンロードし、サンプルプロジェクトに追加願います。
-
-https://www.nend.net/dl/mediapartner/
+[nend管理画面](https://www.nend.net/admin/login)のSDKタブよりダウンロードし、
+サンプルプロジェクトに追加してください。
 
 ## Requirement
 * Titanium SDK 3.5.0.GA 以上
