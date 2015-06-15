@@ -27,6 +27,7 @@ $.nadView.addEventListener('click', function(e){
     Ti.API.info('banner click');
 });
 
+if (OS_ANDROID) {
 $.nadIconsView.addEventListener('receive', function(e){
     Ti.API.info('icon receive');
 });
@@ -38,6 +39,7 @@ $.nadIconsView.addEventListener('error', function(e){
 $.nadIconsView.addEventListener('click', function(e){
     Ti.API.info('icon click');
 });
+}
 
 ad.addEventListener('interstitialLoadResult', function(e){
     Ti.API.info('interstitial LoadResult ResultCode =' + e.resultCode);

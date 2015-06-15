@@ -11,15 +11,13 @@ if (Ti.Platform.osname == 'android') {
 	adView = ad.createView({
 	spotId: 3174,
 	apiKey: 'c5cb8bc474345961c6e7a9778c947957ed8e1e4f',
-	width: '320dp',
-	height: '50dp'
+	// sizeAdjust: true
 	});
 } else {
 	adView = ad.createView({
 	spotId: 3172,
 	apiKey: 'a6eca9dd074372c898dd1df549301f277c53f2b9',
-	width: 320,
-	height: 50
+	// sizeAdjust: true
 	});	
 }
 

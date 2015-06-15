@@ -6,7 +6,7 @@
     <publisher>F@N comminucations, Inc.</publisher>
     <url>http://nend.net/</url>
     <description>undefined</description>
-    <copyright>2014 by F@N comminucations, Inc.</copyright>
+    <copyright>2015 by F@N comminucations, Inc.</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
@@ -19,6 +19,9 @@
                 <key>UISupportedInterfaceOrientations~iphone</key>
                 <array>
                     <string>UIInterfaceOrientationPortrait</string>
+                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                    <string>UIInterfaceOrientationLandscapeLeft</string>
+                    <string>UIInterfaceOrientationLandscapeRight</string>
                 </array>
                 <key>UISupportedInterfaceOrientations~ipad</key>
                 <array>

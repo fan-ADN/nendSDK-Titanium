@@ -5,7 +5,7 @@
         		<View ns="Alloy.Globals.nendAd" id="nadView"/>
         	</Window>
     	</Tab>
-    	<Tab id="tab2">
+    	<Tab platform="android" id="tab2">
         	<Window id="mywin">
 	        	<View ns="Alloy.Globals.nendAd" id="nadIconsView"/>
         	</Window>
