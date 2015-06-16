@@ -1,6 +1,5 @@
 function doClick(e) {
 	ad.showInterstitial();
-	// ad.showInterstitialWithSpotID(Alloy.CFG.nendInterstitialSpotId);
 }
 
 var ad = require('net.nend');
@@ -12,7 +11,6 @@ ad.createInterstitial();
 $.index.addEventListener('android:back', function(e){
     Ti.API.info('android:back');
     ad.showFinishInterstitial();
-    // ad.showFinishInterstitialWithSpotID(Alloy.CFG.nendInterstitialSpotId);
 });
 
 $.nadView.addEventListener('receive', function(e){

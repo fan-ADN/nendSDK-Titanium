@@ -11,10 +11,7 @@
 }
 
 "#nadView": {
-	// top: 0,
 	bottom: 0,
-	// left: 0,
-	// right: 0,
 	// isAdjust: true,
 	apiKey: Alloy.CFG.nendApiKey, 
 	spotId: Alloy.CFG.nendSpotId

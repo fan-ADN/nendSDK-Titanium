@@ -16,23 +16,17 @@ var ad = require('net.nend');
 var adView;
 if (Ti.Platform.osname == 'android') {
 	adView = ad.createView({
-	spotId: 3174,
-	apiKey: 'c5cb8bc474345961c6e7a9778c947957ed8e1e4f',
-	// top: 0,
-	bottom: 0,
-	// left: 0,
-	// right: 0,
-	// isAdjust: true
+		spotId: 3174,
+		apiKey: 'c5cb8bc474345961c6e7a9778c947957ed8e1e4f',
+		bottom: 0,
+		// isAdjust: true
 	});
 } else {
 	adView = ad.createView({
-	spotId: 3172,
-	apiKey: 'a6eca9dd074372c898dd1df549301f277c53f2b9',
-	// top: 0,
-	bottom: 0,
-	// left: 0,
-	// right: 0,
-	// isAdjust: true
+		spotId: 3172,
+		apiKey: 'a6eca9dd074372c898dd1df549301f277c53f2b9',
+		bottom: 0,
+		// isAdjust: true
 	});	
 }
 win1.add(adView);
@@ -81,16 +75,10 @@ var button = Ti.UI.createButton({
 });
 button.addEventListener('click', function(){
 	ad.showInterstitial();
-	// if (Ti.Platform.osname == 'android'){
-		// ad.showInterstitialWithSpotID(213206);
-	// }else{
-		// ad.showInterstitialWithSpotID(213208);
-	// }
 });
 tabGroup.addEventListener('android:back', function(e){
     Ti.API.info('android:back');
     ad.showFinishInterstitial();
-    // ad.showFinishInterstitialWithSpotID(213206);
 });
 win3.add(button);
 
