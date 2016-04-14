@@ -19,6 +19,10 @@ $.nadView.addEventListener('click', function(e){
     Ti.API.info('banner click');
 });
 
+$.nadView.addEventListener('information', function(e){
+    Ti.API.info('banner information click');
+});
+
 if (OS_ANDROID) {
 $.nadIconsView.addEventListener('receive', function(e){
     Ti.API.info('icon receive');
@@ -30,6 +34,10 @@ $.nadIconsView.addEventListener('error', function(e){
 
 $.nadIconsView.addEventListener('click', function(e){
     Ti.API.info('icon click');
+});
+
+$.nadIconsView.addEventListener('information', function(e){
+    Ti.API.info('icon information click');
 });
 }
 
