@@ -13,6 +13,7 @@ function Controller() {
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     this.__controllerPath = "index";
+    this.args = arguments[0] || {};
     if (arguments[0]) {
         {
             __processArg(arguments[0], "__parentSymbol");
@@ -33,8 +34,7 @@ function Controller() {
         id: "mywin"
     });
     $.__views.nadView = Alloy.Globals.nendAd.createView({
-        width: 320,
-        height: 75,
+        bottom: 0,
         apiKey: Alloy.CFG.nendApiKey,
         spotId: Alloy.CFG.nendSpotId,
         id: "nadView"
@@ -50,27 +50,6 @@ function Controller() {
         backgroundColor: "white",
         id: "mywin"
     });
-    $.__views.nadIconsView = Alloy.Globals.nendAd.createView({
-        width: 320,
-        height: 75,
-        adType: "icon",
-        orientation: "horizontal",
-        iconCount: 1,
-        apiKey: Alloy.CFG.nendIconsApiKey,
-        spotId: Alloy.CFG.nendIconsSpotId,
-        id: "nadIconsView"
-    });
-    $.__views.mywin.add($.__views.nadIconsView);
-    $.__views.tab2 = Ti.UI.createTab({
-        title: "IconType",
-        window: $.__views.mywin,
-        id: "tab2"
-    });
-    __alloyId0.push($.__views.tab2);
-    $.__views.mywin = Ti.UI.createWindow({
-        backgroundColor: "white",
-        id: "mywin"
-    });
     $.__views.label = Ti.UI.createLabel({
         width: Ti.UI.SIZE,
         height: Ti.UI.SIZE,
@@ -82,7 +61,7 @@ function Controller() {
         id: "label"
     });
     $.__views.mywin.add($.__views.label);
-    doClick ? $.__views.label.addEventListener("click", doClick) : __defers["$.__views.label!click!doClick"] = true;
+    doClick ? $.addListener($.__views.label, "click", doClick) : __defers["$.__views.label!click!doClick"] = true;
     $.__views.tab3 = Ti.UI.createTab({
         title: "InterstitialType",
         window: $.__views.mywin,
@@ -100,10 +79,6 @@ function Controller() {
     ad.apiKey = Alloy.CFG.nendInterstitialApiKey;
     ad.spotId = Alloy.CFG.nendInterstitialSpotId;
     ad.createInterstitial();
-    $.index.addEventListener("android:back", function() {
-        Ti.API.info("android:back");
-        ad.showFinishInterstitial();
-    });
     $.nadView.addEventListener("receive", function() {
         Ti.API.info("banner receive");
     });
@@ -112,15 +87,6 @@ function Controller() {
     });
     $.nadView.addEventListener("click", function() {
         Ti.API.info("banner click");
-    });
-    $.nadIconsView.addEventListener("receive", function() {
-        Ti.API.info("icon receive");
-    });
-    $.nadIconsView.addEventListener("error", function() {
-        Ti.API.info("icon error");
-    });
-    $.nadIconsView.addEventListener("click", function() {
-        Ti.API.info("icon click");
     });
     ad.addEventListener("interstitialLoadResult", function(e) {
         Ti.API.info("interstitial LoadResult ResultCode =" + e.resultCode);
@@ -132,7 +98,7 @@ function Controller() {
         Ti.API.info("interstitial Click ResultCode =" + e.resultCode);
     });
     $.index.open();
-    __defers["$.__views.label!click!doClick"] && $.__views.label.addEventListener("click", doClick);
+    __defers["$.__views.label!click!doClick"] && $.addListener($.__views.label, "click", doClick);
     _.extend($, exports);
 }
 

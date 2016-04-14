@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>net.nend.ti.AlloySample</id>
+    <id>net.nend.alloysample</id>
     <name>AlloySample</name>
-    <version>1.1</version>
+    <version>1.2</version>
     <publisher>F@N comminucations, Inc.</publisher>
     <url>http://nend.net/</url>
     <description>undefined</description>
-    <copyright>2015 by F@N comminucations, Inc.</copyright>
+    <copyright>2016 by F@N comminucations, Inc.</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>27655723-cfd2-489d-ac17-23e9023521fa</guid>
+    <guid>4be2e1ec-7344-476e-9444-cf8822ac134d</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
+        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
         <plist>
             <dict>
                 <key>UISupportedInterfaceOrientations~iphone</key>
@@ -46,6 +47,7 @@
             <application>
                 <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
             </application>
+            <uses-permission android:name="android.permission.INTERNET"/>
         </manifest>
     </android>
     <mobileweb>
@@ -56,19 +58,18 @@
         </splash>
         <theme>default</theme>
     </mobileweb>
-    <modules/>
     <modules>
-        <module platform="iphone">net.nend</module>
         <module platform="android">net.nend</module>
+        <module platform="iphone">net.nend</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
-        <target device="blackberry">false</target>
         <target device="ipad">true</target>
         <target device="iphone">true</target>
         <target device="mobileweb">false</target>
+        <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>3.5.0.GA</sdk-version>
+    <sdk-version>5.2.2.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>

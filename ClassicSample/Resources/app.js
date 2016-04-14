@@ -76,10 +76,6 @@ var button = Ti.UI.createButton({
 button.addEventListener('click', function(){
 	ad.showInterstitial();
 });
-tabGroup.addEventListener('android:back', function(e){
-    Ti.API.info('android:back');
-    ad.showFinishInterstitial();
-});
 win3.add(button);
 
 if (Ti.Platform.osname == 'android'){
