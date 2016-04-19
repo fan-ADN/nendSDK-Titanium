@@ -76,10 +76,6 @@ var button = Ti.UI.createButton({
 button.addEventListener('click', function(){
 	ad.showInterstitial();
 });
-tabGroup.addEventListener('android:back', function(e){
-    Ti.API.info('android:back');
-    ad.showFinishInterstitial();
-});
 win3.add(button);
 
 if (Ti.Platform.osname == 'android'){
@@ -112,6 +108,10 @@ adView.addEventListener('click', function(e){
     Ti.API.info('banner click');
 });
 
+adView.addEventListener('information', function(e){
+    Ti.API.info('banner information click');
+});
+
 if (Ti.Platform.osname == 'android') {
 	adIconsView.addEventListener('receive', function(e){
 	    Ti.API.info('icon receive');
@@ -123,6 +123,10 @@ if (Ti.Platform.osname == 'android') {
 
 	adIconsView.addEventListener('click', function(e){
 	    Ti.API.info('icon click');
+	});
+
+	adIconsView.addEventListener('information', function(e){
+	    Ti.API.info('icon information click');
 	});
 }
 

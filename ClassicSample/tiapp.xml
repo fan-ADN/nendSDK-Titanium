@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>net.nend.ti.ClassicSample</id>
+    <id>net.nend.classicsample</id>
     <name>ClassicSample</name>
-    <version>1.0</version>
+    <version>1.2</version>
     <publisher>F@N comminucations, Inc.</publisher>
     <url>http://nend.net/</url>
-    <description>undefined</description>
+    <description/>
     <copyright>2015 by F@N comminucations, Inc.</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
-    <guid>638a2469-78c7-4c6a-89b5-03daa800b5bb</guid>
+    <guid>0af12948-a717-465a-9777-76d113e1eb19</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <ios>
+        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
         <plist>
             <dict>
                 <key>UISupportedInterfaceOrientations~iphone</key>
@@ -57,15 +58,15 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-        <module platform="iphone">net.nend</module>
         <module platform="android">net.nend</module>
+        <module platform="iphone">net.nend</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
-        <target device="blackberry">false</target>
         <target device="ipad">true</target>
         <target device="iphone">true</target>
         <target device="mobileweb">false</target>
+        <target device="windows">false</target>
     </deployment-targets>
-    <sdk-version>3.5.0.GA</sdk-version>
+    <sdk-version>5.2.2.GA</sdk-version>
 </ti:app>

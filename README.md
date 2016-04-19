@@ -1,6 +1,6 @@
 # nendSDK-Titanium Sample Project
 
-![ロゴ](https://github.com/fan-ADN/nendSDK-Android/blob/master/Sample/res/drawable/nend_logo.png)
+![ロゴ](https://github.com/fan-ADN/nendSDK-iOS/blob/master/Sample/NendSDK_Sample/Images.xcassets/AppIcon.appiconset/icon-60%403x.png)
 
 ## Overview
 nendSDK Titanium Mobile用モジュールのサンプルプロジェクトです。
@@ -11,13 +11,13 @@ nendSDK Titanium Mobile用モジュールのサンプルプロジェクトです
 サンプルプロジェクトに追加してください。
 
 ## Requirement
-* Titanium SDK 3.5.0.GA 以上
+* Titanium SDK 3.5.1.GA 以上
 
 ## Usage
 以下の手順にしたがって実行してください。
 
 
-1.Titanium StudioへサンプルプロジェクトをImportする。<br>
+1.Appcelerator StudioへサンプルプロジェクトをImportする。<br>
 2.モジュールをプロジェクトに配置する。<br>
 3.モジュールの設定を行う。<br>
 4.Runを実行する。<br>

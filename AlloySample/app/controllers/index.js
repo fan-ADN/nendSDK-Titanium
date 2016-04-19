@@ -7,12 +7,6 @@ ad.apiKey=Alloy.CFG.nendInterstitialApiKey;
 ad.spotId=Alloy.CFG.nendInterstitialSpotId;
 ad.createInterstitial();
 
-
-$.index.addEventListener('android:back', function(e){
-    Ti.API.info('android:back');
-    ad.showFinishInterstitial();
-});
-
 $.nadView.addEventListener('receive', function(e){
     Ti.API.info('banner receive');
 });
@@ -23,6 +17,10 @@ $.nadView.addEventListener('error', function(e){
 
 $.nadView.addEventListener('click', function(e){
     Ti.API.info('banner click');
+});
+
+$.nadView.addEventListener('information', function(e){
+    Ti.API.info('banner information click');
 });
 
 if (OS_ANDROID) {
@@ -37,6 +35,10 @@ $.nadIconsView.addEventListener('error', function(e){
 $.nadIconsView.addEventListener('click', function(e){
     Ti.API.info('icon click');
 });
+
+$.nadIconsView.addEventListener('information', function(e){
+    Ti.API.info('icon information click');
+});
 }
 
 ad.addEventListener('interstitialLoadResult', function(e){
@@ -50,6 +52,5 @@ ad.addEventListener('interstitialShowResult', function(e){
 ad.addEventListener('interstitialClick', function(e){
     Ti.API.info('interstitial Click ResultCode =' + e.resultCode);
 });
-
 
 $.index.open();
