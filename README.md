@@ -1,6 +1,11 @@
-# nendSDK-Titanium Sample Project
+# [DEPRECATED] nendSDK-Titanium
 
-![ロゴ](https://github.com/fan-ADN/nendSDK-iOS/blob/master/Sample/NendSDK_Sample/Images.xcassets/AppIcon.appiconset/icon-60%403x.png)
+誠に勝手ながら、nendSDK Titanium Mobile用モジュールは、2016年4月18日リリースのバージョン1.5.0をもちまして、アップデートおよびサポートを終了させていただきました。
+なお、最終バージョンのモジュールおよびモジュールのソースコードは、本リポジトリよりダウンロードできます。
+* [モジュール](https://github.com/fan-ADN/nendSDK-Titanium/blob/master/Titanium_module.zip)
+* [ソースコード](https://github.com/fan-ADN/nendSDK-Titanium/blob/master/Titanium_module_source.zip)
+
+---
 
 ## Overview
 nendSDK Titanium Mobile用モジュールのサンプルプロジェクトです。
