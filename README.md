@@ -23,3 +23,6 @@ nendSDK Titanium Mobile用モジュールのサンプルプロジェクトです
 4. Runを実行する。
 
 モジュールの配置、設定の詳細に関しては、[wiki](https://github.com/fan-ADN/nendSDK-Titanium/wiki)の[モジュールの組み込み](https://github.com/fan-ADN/nendSDK-Titanium/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF)を参照してください。
+
+## License
+[MIT](https://github.com/fan-ADN/nendSDK-Titanium/blob/master/LICENSE.md)
